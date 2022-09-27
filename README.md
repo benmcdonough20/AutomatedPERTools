@@ -16,49 +16,9 @@ As of writing this, Mitiq [4] dependencies are in conflict with PyGSTi [7] and P
 
 ## Features
 * Use of PyGSTi + Mitiq for QPD channel repersentations on Rigetti hardware
-* Application of canonical noise scaling [2] to sparse Pauli noise model
-* Proposal of parameter scaling technique for applying PER to sparse Pauli model
-* Implementation of sparse Pauli model learning procedure for arbitrary circuit layers consisting of single-qubit gates and self-adjoint two-qubit Clifford gates
-* Package for easily importing this procedure as part of a Qiskit or PyQuil workflow
-* Routine for parsing an arbitrary circuit to generate benchmark procedure
-
-## Features that are not currently implemented
-* Complete testing suite
-* Scalable GST under no-crosstalk assumptions
-* Generation of error-reduced circuits
-* Incorporation of Qiskit and PyQuil experiment frameworks
-* Parametric compilation of benchmark circuits
-
-## Project Structure
-The structure of the package follows the research process involved in development. The progression can be viewed in the following order:
-
-### PyGSTi_Mitiq
-This folder shows the use of PyGSTi and Mitiq to carry out gate set tomography on a processor and use these to create QPD representations of quantum channels. Canonical noise scaling can be applied to these representations to apply PER to these circuits. Although gate set tomography is not scalable, a current area of expansion of this project is using assumptions about the level of crosstalk to reduce the scaling of the GST to constant in the number of qubits.
-* `GetGSTData` - This notebook demonstrates how to use PyGSTi to generate QUIL circuits to carry out GST on an example gate set.
-* `ProcessGSTData` - This shows how to process the data to obtain superoperator representations of noisy channels.
-* `MitiqQPDRepresentation` - Here the data obtained from the example gate set tomography is combined with the tools in Mitiq to arrive at a QPD representation of an ideal quantum channel.
-
-### SingleQubit
-This folder contains an illustration of the sparse Pauli-Lindblad noise learning process for single qubit gates and a proof-of-concept demonstration of the application of different methods for PER applied to this model.
-* `LearningTheModel` - This notebook demonstrates the technique for efficiently carrying out noise twirling and measurement of Pauli fidelities on a single qubit, and then shows how to use the obtained fidelities to fit the sparse noise model.
-* `OneQubitCanonicalNoiseScaling` - This shows how canonical noise scaling can be applied to the sparse model obtained through the Pauli tomography process, and explores some of the issues that the canonical noise scaling model poses for scalability of the technique.
-* `OneQubitParameterScaling` - Here, the issues with canonical noise scaling are resolved by proposing a new technique called *parameter scaling* to apply PER to the sparse Pauli model. It is also shown how virtual zero-noise extrapolation (VZNE) can be used to improve the accuracy of PER.
-
-### MultiQubit
-This folder contains notebooks which extend the learning procedure to an arbitrary number of qubits.
-* `SingleQubitGateLearning` - This notebook carries out a simplified learning procedure on a layer of arbitrary single-qubit gates in simulation. It is shown that the twirled noise can accurately approximate a non-pauli amplitude-damping noise model.
-* `TwoQubitGateLearning` - This notebook shows how several modifications of the same procedure can extend it to include two-qubit self-adjoint Clifford gates. This enables the procedure to by applied to a complete gate set. A test noise model is used to demonstrate the efficacy of the procedure.
-
-### TomographyProcedure
-This notebook combines all of the parts of the learning procedure into a program which can be used to easily implement the sparse model learning procedure and return the model coefficients associated with an arbitrary circuit layer.
-* `TomographyProcedure` - This notebook gives a step-by-step walkthrough of how the sparse noise model learning procedure is implemented for an arbitrary circuit layer.
-* `QiskitImplementation` - This packages the procedure outlined in the previous notebook into a set of classes which can easily be imported and run to abstract the details of the learning procedure.
-* `PyQuilImplementation` - This package removes all of the Qiskit dependencies and implements the same procedure natively for Rigetti backends
-
-### ArbitraryCircuit
-
-* `CircuitDecomposition` - This notebook shows how an arbitrary `QuantumCircuit` object, complete with measurements, can be parsed to create a sequence of layers satisfying the requirements for benchmarking using the sparse Pauli tomography procedure
-* `ProcedureGeneration` - Here, the procedure generation for individual layers and the circuit parsing routine are put together to generate a full sparse Pauli tomography experiment for the layers in an arbitrary circuit. Once the analysis is integrated, this will make the benchmarking procedure fully autonomous. This notebook is not complete, so it may be disorganized and confusing!
+* Proposal of noise scaling technique for Sparse Pauli-Lindblad model
+* Creation of python package to automate tomography + PER for Sparse-Pauli model on arbitrary circuits
+* Tutorial notebooks illustrating details of procedure
 
 ## Credits
 Project Advisor: [Dr. Peter Orth](https://faculty.sites.iastate.edu/porth/)
