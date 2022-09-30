@@ -1,0 +1,28 @@
+2022-09-30 15:15:50,255 Generated layer profile with 1 layers:
+2022-09-30 15:15:50,255 ["('cx', (Qubit(QuantumRegister(2, 'q'), 0), Qubit(QuantumRegister(2, 'q'), 1)))"]
+2022-09-30 15:15:50,258 Created pauli bases
+2022-09-30 15:15:50,258 ['XX', 'YX', 'ZX', 'XY', 'YY', 'ZY', 'XZ', 'YZ', 'ZZ']
+2022-09-30 15:15:50,258 Created model with the following terms:
+2022-09-30 15:15:50,258 {'ZI', 'IY', 'YY', 'IZ', 'XZ', 'ZY', 'YI', 'ZZ', 'YZ', 'XX', 'ZX', 'XI', 'YX', 'IX', 'XY'}
+2022-09-30 15:15:54,911 Chose single bases:
+2022-09-30 15:15:54,911 ['YZ', 'ZZ', 'XX', 'ZY', 'ZX', 'XY']
+2022-09-30 15:16:16,412 Created experiment consisting of 1464 instances
+2022-09-30 15:16:43,664 Fit noise model with following fidelities:
+2022-09-30 15:16:43,664 [0.9965923115334312, 0.9652720721640965, 0.9660830704990649, 0.9957679885411046, 0.9920659779069906, 0.9722264610264271, 0.9971013509290182, 0.9889006119475653, 0.9884171148719665, 0.9566153873531019, 0.9605535152895307, 0.9958748748769443, 0.9527143075634024, 0.974892822315171, 0.9688672104211077]
+2022-09-30 15:20:40,210 Generated layer profile with 1 layers:
+2022-09-30 15:20:40,210 ["('cx', (Qubit(QuantumRegister(5, 'q'), 0), Qubit(QuantumRegister(5, 'q'), 1)))"]
+2022-09-30 15:20:40,211 Created pauli bases
+2022-09-30 15:20:40,211 ['XX', 'YX', 'ZX', 'XY', 'YY', 'ZY', 'XZ', 'YZ', 'ZZ']
+2022-09-30 15:20:40,211 Created model with the following terms:
+2022-09-30 15:20:40,211 {'ZI', 'IY', 'YY', 'IZ', 'XZ', 'ZY', 'YI', 'ZZ', 'YZ', 'XX', 'ZX', 'XI', 'YX', 'IX', 'XY'}
+2022-09-30 15:23:13,839 Generated layer profile with 1 layers:
+2022-09-30 15:23:13,840 ["('cx', (Qubit(QuantumRegister(2, 'q'), 0), Qubit(QuantumRegister(2, 'q'), 1)))"]
+2022-09-30 15:23:13,841 Created pauli bases
+2022-09-30 15:23:13,841 ['XX', 'YX', 'ZX', 'XY', 'YY', 'ZY', 'XZ', 'YZ', 'ZZ']
+2022-09-30 15:23:13,842 Created model with the following terms:
+2022-09-30 15:23:13,842 {'ZI', 'IY', 'YY', 'IZ', 'XZ', 'ZY', 'YI', 'ZZ', 'YZ', 'XX', 'ZX', 'XI', 'YX', 'IX', 'XY'}
+2022-09-30 15:23:15,226 Chose single bases:
+2022-09-30 15:23:15,227 ['YZ', 'ZZ', 'XX', 'ZY', 'ZX', 'XY']
+2022-09-30 15:23:36,327 Created experiment consisting of 1464 instances
+2022-09-30 15:24:01,500 Fit noise model with following fidelities:
+2022-09-30 15:24:01,501 [0.9879667560933654, 0.97009365766217, 0.9797128668666123, 0.9963158712055759, 0.9923197943365326, 0.9675433982662872, 0.9999507681065952, 0.9975174167188186, 0.9855628252364326, 0.9672152698594433, 0.9512484319861694, 0.9954613436130705, 0.9577200210807916, 0.9654103516741614, 0.963236360813103]
