@@ -3,9 +3,9 @@ import numpy as np
 from matplotlib import pyplot as plt
 
 from framework.noisemodel import NoiseModel
+from tomography.layerlearning import LayerLearning
 from tomography.termdata import TermData, COLORS
 from primitives.circuit import Circuit
-from primitives.pauli import Pauli
 from tomography.benchmarkinstance import BenchmarkInstance, SINGLE, PAIR
 
 import logging
@@ -17,36 +17,41 @@ class LayerNoiseData:
     """This class is responsible for aggregating the data associated with a single layer,
     processing it, and converting it into a noise model to use for PER"""
 
-    def __init__(self, layer : Circuit):
+    def __init__(self, layer : LayerLearning):
         self._term_data = {} #keys are terms and the values are TermDatas
-        self.cliff_layer = layer #LayerNoiseData is assocaited with a clifford layer
+        self.layer = layer
 
-        #used to reduce computational complexity of determining simulatanous measurements
-        self.sim_measurements = {}
+        for pauli in layer._procspec.model_terms:
+            pair = layer.pairs[pauli]
+            self._term_data[pauli] = TermData(pauli, pair)
 
-    def sim_meas(self, inst, pauli, procspec):
+    def sim_meas(self, pauli):
         """Given an instance and a pauli operator, determine how many terms can be measured"""
-        pair = inst.cliff_layer.conjugate(pauli)
-        if inst.type == SINGLE:
-            return [term for term in procspec.model_terms if pauli.simultaneous(term) and pair.simultaneous(self.cliff_layer.conjugate(term))]
-        elif inst.type == PAIR:
-            return [term for term in procspec.model_terms if pauli.simultaneous(term)]
+        return [term for term in self.layer._procspec.model_terms if pauli.simultaneous(term)]
 
-    def add_expectation(self, inst : BenchmarkInstance, procspec):
+    def add_expectations(self):
+        for inst in self.layer.instances:
+            self.add_expectation(inst)
+
+    def add_expectation(self, inst : BenchmarkInstance):
         """Add the result of a benchmark instance to the correct TermData object"""
 
         basis = inst.meas_basis
-            
-        if not basis in self.sim_measurements:
-            self.sim_measurements[basis] = self.sim_meas(inst, basis, procspec)
+        sim_meas = {}
 
-        for pauli in self.sim_measurements[basis]:
-            pair = self.cliff_layer.conjugate(pauli) #get the pair of the pauli term
-            if not pauli in self._term_data: #add key to dictionary if it does not exist
-                self._term_data[pauli] = TermData(pauli, pair)
+        if inst.type == SINGLE: 
+            pauli = inst.meas_basis
+            expectation = inst.get_expectation(pauli)
+            self._term_data[pauli].add_single_expectation(expectation)
 
-            #add the expectation value to the data for this term
-            self._term_data[pauli].add_expectation(inst.depth, inst.get_expectation(pauli), inst.type)
+        elif inst.type == PAIR:
+
+            if not basis in sim_meas:
+                sim_meas[basis] = self.sim_meas(basis)
+
+            for pauli in sim_meas[basis]:
+                #add the expectation value to the data for this term
+                self._term_data[pauli].add_expectation(inst.depth, inst.get_expectation(pauli), inst.type)
 
         
     def fit_noise_model(self):
@@ -55,6 +60,12 @@ class LayerNoiseData:
 
         for term in self._term_data.values(): #perform all pairwise fits
             term.fit()
+        
+        for pair,pauli in self.layer.single_pairs:
+            self._term_data[pauli].fit_single()
+            pair_dat = self._term_data[pair]
+            pair_dat.fidelity = pair_dat.fidelity**2/self._term_data[pauli].fidelity
+
         
         logger.info("Fit noise model with following fidelities:") 
         logger.info([term.fidelity for term in self._term_data.values()])
@@ -97,7 +108,7 @@ class LayerNoiseData:
        
         #perform least-squares estimate of model coefficients and return as noisemodel 
         coeffs,_ = nnls(np.add(M1,M2), -np.log(fidelities)) 
-        self.noisemodel = NoiseModel(self.cliff_layer, F1, coeffs)
+        self.noisemodel = NoiseModel(self.layer._cliff_layer, F1, coeffs)
 
     def _model_terms(self, links): #return a list of Pauli terms with the specified support
         groups = []

@@ -2,8 +2,6 @@ import numpy as np
 from random import random
 
 SCALING = "scaling"
-LOCAL_DEPOL = "ldepol"
-CROSSTALK_SCALING = "ctscale"
 
 
 class NoiseModel:

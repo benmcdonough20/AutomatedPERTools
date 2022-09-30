@@ -38,23 +38,23 @@ class TermData:
 
         self._single_vals = [] #degeneracy-lifting single-depth measurements
         self._single_count = 0 #number of single-depth measurements
+        self.single_fidelity = None
 
         self._spam = None #spam coefficients
         self._fidelity = None #fidelity
+        self.pair_fidelity = None
 
         #Record whether the expecatation value resulted from a single or double measurement
         self.type = PAIR
     
     def add_expectation(self, depth, expectation, type):
         """Add the value of a measurement to the term data"""
-        if type == PAIR:
-            self._expectations[depth] = self._expectations.get(depth, 0) + expectation
-            self._count[depth] = self._count.get(depth, 0) + 1
-        elif type == SINGLE:
-            self.type = SINGLE #record that the fidelity is obtained through single measurements
-            self._single_vals.append(expectation) #record expectation value
-            self._single_count += 1
-
+        self._expectations[depth] = self._expectations.get(depth, 0) + expectation
+        self._count[depth] = self._count.get(depth, 0) + 1
+            
+    def add_single_expectation(self, expectation):
+        self._single_vals.append(expectation) #record expectation value
+        self._single_count += 1
 
     def depths(self):
         """Return the measurement depths as a list in increasing order"""
@@ -70,7 +70,7 @@ class TermData:
     def _fit(self):
         expfit = lambda x,a,b: a*np.exp(-b*x) #Decay of twirled channel is exponential
         try: #OptimizeWarning will be caught by filter
-            (a,b),_ = curve_fit(expfit, self.depths(), self.expectations(), p0 = [.8, .01])
+            (a,b),_ = curve_fit(expfit, self.depths(), self.expectations(), p0 = [.8, .01], bounds = ((0,0),(1,1)))
         except:
             (a,b) = 1,0
             logger.warning("Fit did not converge!")
@@ -81,7 +81,7 @@ class TermData:
         to make a degeneracy-lifting measurement of the fidelity"""
 
         #get expectation by dividing by single count and then divide by SPAM coefficient
-        expectation = abs(sum(self._single_vals)/self._single_count)
+        expectation = sum(self._single_vals)/self._single_count
         fidelity = abs(expectation)/self.spam
 
         #the pair measurements are more accurate, so the single-depth measurement is assumed
@@ -92,6 +92,7 @@ class TermData:
             logger.warning("Single fidelity: %s"%str(fidelity))
             fidelity = self.fidelity**2
 
+        self.single_fidelity = fidelity
         self.fidelity = fidelity
 
     def fit(self):
@@ -101,11 +102,8 @@ class TermData:
         #perform fit of pair
         a,b = self._fit()
         self.spam = a
+        self.pair_fidelity = np.exp(-b)
         self.fidelity = np.exp(-b)
-
-        #perform single fit if data was recorded
-        if self.type == SINGLE:
-            self.fit_single()
 
     def graph(self, ax):
         """Graph the fidelity of the Pauli at different depths vs the exponential fit"""

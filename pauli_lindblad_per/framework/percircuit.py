@@ -23,6 +23,13 @@ class PERCircuit:
                 nm = noise_data_frame.noisemodels[layer.cliff_layer]
                 layer.noisemodel = nm
 
+    def overhead(self, noise_strength):
+        overhead = 1
+        for layer in self._layers:
+            layer.noisemodel.init_scaling(noise_strength)
+            overhead *= layer.noisemodel.overhead
+        return overhead
+
     def _circuit_to_benchmark_layers(self):
         """
         input - self._qc

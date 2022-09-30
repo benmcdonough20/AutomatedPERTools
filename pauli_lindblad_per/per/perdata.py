@@ -75,10 +75,11 @@ class PERData:
         """
 
         fig, ax = plt.subplots()
-        ax.plot(self.get_strengths(), self.get_expectations())
+        ax.plot(self.get_strengths(), self.get_expectations(), linestyle = "None", marker = "x", color = "tab:blue")
         a,b = self.fit()
         xlin = np.linspace(0, max(self.get_strengths()), 100)
-        ax.plot(xlin, [a*np.exp(b*x) for x in xlin])
+        ax.plot(xlin, [a*np.exp(b*x) for x in xlin], color = "tab:blue", linestyle="--")
+
         return ax
 
     

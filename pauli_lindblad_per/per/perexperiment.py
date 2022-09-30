@@ -135,3 +135,6 @@ class PERExperiment:
             run.analyze()
 
         return self._per_runs
+
+    def get_overhead(self, layer, noise_strength):
+        return self._per_circuits[layer].overhead(noise_strength)

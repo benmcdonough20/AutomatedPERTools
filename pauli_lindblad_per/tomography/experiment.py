@@ -47,8 +47,15 @@ class SparsePauliTomographyExperiment:
 
         self._procspec = ProcessorSpec(inst_map, processor)
         self.instances = []
-        self.analysis = Analysis(self._procspec)
         self._inst_map = inst_map
+        self._layers = None
+
+        self._layers = []
+        for l in self._profiles:
+            learning = LayerLearning(l,self._procspec)
+            self._layers.append(learning)
+
+        self.analysis = Analysis(self._layers, self._procspec)
 
     def generate(self, samples, single_samples, depths):
         """This method is used to generate the experimental benchmarking procedure. The samples
@@ -58,29 +65,29 @@ class SparsePauliTomographyExperiment:
         The depths control the different circuit depths to use for the exponential fits."""
 
         if len(depths) < 2:
-            raise Exception("Exponental fit required 3 or more depth data points.")
+            raise Exception("Exponental fit requires 3 or more depth data points.")
 
-        self.instances = []
-        for l in self._profiles:
-            learning = LayerLearning(l, samples, single_samples, depths)
-            self.instances += learning.procedure(self._procspec)
+        for l in self._layers:
+            l.procedure(samples, single_samples, depths)
 
     def run(self, executor):
         """This method produces a list of circuits in the native representation, passes them 
         as a list to the executor method, and associates the result with the benchmark instances
         that produced it"""
 
-        for l in self._profiles:
-            circuits = [inst.get_circuit() for inst in self.instances]
+        instances = []
+        for l in self._layers:
+            instances += l.instances
 
+        circuits = [inst.get_circuit() for inst in instances]
         results = executor(circuits)
 
-        for res,inst in zip(results, self.instances): #TODO: find out if order can be preserved
+        for res,inst in zip(results, instances): #TODO: find out if order can be preserved
             inst.add_result(res)
 
     def analyze(self):
         """Runs analysis on each layer representative and stores for later plotting/viewing"""
-        self.analysis.analyze(self.instances)
+        self.analysis.analyze()
         return self.analysis.noisedataframe
 
     def create_per_experiment(self, circuits : Any) -> PERExperiment:
