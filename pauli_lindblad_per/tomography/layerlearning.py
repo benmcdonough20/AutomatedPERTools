@@ -39,9 +39,9 @@ class LayerLearning:
         single_bases = []
         for p1,p2 in self.single_pairs:
             for i,pauli in enumerate(single_bases):
-                pair = self.pairs[pauli]
+                pair = self._cliff_layer.conjugate(pauli)
                 if pauli.separate(p1) and pair.separate(p2):
-                    single_bases[i] = pauli * p1
+                    single_bases[i] = pauli * p2
                     break
             else:
                 single_bases.append(p2)
@@ -66,7 +66,7 @@ class LayerLearning:
             instances.append(inst)
 
         for basis,s in product(self.single_bases, range(self.single_samples)):
-            inst = BenchmarkInstance(self.pairs[basis], basis, SINGLE, self._procspec, self._cliff_layer, SINGLE)
+            inst = BenchmarkInstance(self._cliff_layer.conjugate(basis), basis, SINGLE, self._procspec, self._cliff_layer, SINGLE)
             instances.append(inst)
 
         logger.info("Created experiment consisting of %u instances"%len(instances))

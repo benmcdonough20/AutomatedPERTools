@@ -29,6 +29,9 @@ class LayerNoiseData:
         """Given an instance and a pauli operator, determine how many terms can be measured"""
         return [term for term in self.layer._procspec.model_terms if pauli.simultaneous(term)]
 
+    def single_sim_meas(self, pauli, prep):
+        return [term for pair,term in self.layer.single_pairs if pauli.simultaneous(term) and prep.simultaneous(pair)]
+
     def add_expectations(self):
         for inst in self.layer.instances:
             self.add_expectation(inst)
@@ -37,21 +40,28 @@ class LayerNoiseData:
         """Add the result of a benchmark instance to the correct TermData object"""
 
         basis = inst.meas_basis
-        sim_meas = {}
+        prep = inst.prep_basis
+        pair_sim_meas = {}
+        single_sim_meas = {}
 
         if inst.type == SINGLE: 
-            pauli = inst.meas_basis
-            expectation = inst.get_expectation(pauli)
-            self._term_data[pauli].add_single_expectation(expectation)
+
+            if not basis in single_sim_meas:
+                single_sim_meas[basis] = self.single_sim_meas(basis, prep)
+
+            for pauli in single_sim_meas[basis]:
+                expectation = inst.get_expectation(pauli)
+                self._term_data[pauli].add_single_expectation(expectation)
 
         elif inst.type == PAIR:
 
-            if not basis in sim_meas:
-                sim_meas[basis] = self.sim_meas(basis)
+            if not basis in pair_sim_meas:
+                pair_sim_meas[basis] = self.sim_meas(basis)
 
-            for pauli in sim_meas[basis]:
+            for pauli in pair_sim_meas[basis]:
                 #add the expectation value to the data for this term
-                self._term_data[pauli].add_expectation(inst.depth, inst.get_expectation(pauli), inst.type)
+                expectation = inst.get_expectation(pauli)
+                self._term_data[pauli].add_expectation(inst.depth, expectation, inst.type)
 
         
     def fit_noise_model(self):
