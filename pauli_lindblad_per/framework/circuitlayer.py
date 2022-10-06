@@ -65,9 +65,5 @@ class CircuitLayer:
 
         return hash(self.cliff_layer)
 
-    def sample_PER(self, noise_model) -> Tuple[Circuit, int, Pauli]:
-        """sample a PER representation of the layer"""
-        pass
-
     def __str__(self):
         return self.layer.__str__()
