@@ -2,14 +2,14 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="852.58234mm"
-   height="1000mm"
-   viewBox="0 0 852.58236 999.99997"
+   width="414.37518mm"
+   height="451.36469mm"
+   viewBox="0 0 414.37519 451.36467"
    version="1.1"
    id="svg5"
    inkscape:version="1.2.1 (9c6d41e410, 2022-07-14, custom)"
    sodipodi:docname="Process_vertical.svg"
-   inkscape:export-filename="UMLDiagram.png"
+   inkscape:export-filename="action_illustration_vertical.png"
    inkscape:export-xdpi="93.272072"
    inkscape:export-ydpi="93.272072"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -28,12 +28,12 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="0.37201788"
-     inkscape:cx="1651.8023"
-     inkscape:cy="1065.809"
-     inkscape:window-width="1900"
-     inkscape:window-height="1030"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:cx="313.15699"
+     inkscape:cy="874.95795"
+     inkscape:window-width="1898"
+     inkscape:window-height="1001"
+     inkscape:window-x="10"
+     inkscape:window-y="32"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1" />
   <defs
@@ -1152,7 +1152,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-531.68669,-143.94155)">
+     transform="translate(-749.3433,-234.86061)">
     <g
        id="g2712"
        transform="translate(160.41705,112.41862)" />
@@ -1180,7 +1180,7 @@
        style="font-size:40px;line-height:1.25;font-family:'DejaVu Math TeX Gyre';-inkscape-font-specification:'DejaVu Math TeX Gyre';white-space:pre;shape-inside:url(#rect867);display:inline;stroke-width:0.60294" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 749.3433,379.24062 v 0"
+       d="m 966.99991,470.15968 v 0"
        id="path979"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
@@ -1621,26 +1621,26 @@
     <text
        xml:space="preserve"
        style="font-size:14.519px;line-height:1.25;font-family:'DejaVu Math TeX Gyre';-inkscape-font-specification:'DejaVu Math TeX Gyre';stroke-width:1.4;stroke-dasharray:none"
-       x="792.80389"
-       y="233.17043"
+       x="794.78601"
+       y="241.97742"
        id="text16182-5-3-5-3-8-0-1-1"
        transform="scale(0.9497893,1.0528651)"><tspan
          sodipodi:role="line"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.519px;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:1.4;stroke-dasharray:none"
-         x="792.80389"
-         y="233.17043"
-         id="tspan5579-0">Sparse Pauli Tomography</tspan></text>
+         x="794.78601"
+         y="241.97742"
+         id="tspan5579-0">Pauli Noise Tomography</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:14.519px;line-height:1.25;font-family:'DejaVu Math TeX Gyre';-inkscape-font-specification:'DejaVu Math TeX Gyre';stroke-width:1.4;stroke-dasharray:none"
-       x="1010.9982"
-       y="234.18965"
+       x="1008.0588"
+       y="241.81973"
        id="text16182-5-3-5-3-8-0-1-1-3"
        transform="scale(0.9497893,1.0528651)"><tspan
          sodipodi:role="line"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.519px;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:1.4;stroke-dasharray:none"
-         x="1010.9982"
-         y="234.18965"
+         x="1008.0588"
+         y="241.81973"
          id="tspan5579-0-4">Noise Scaling + Virtual ZNE</tspan></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:6, 3;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#Arrow1)"

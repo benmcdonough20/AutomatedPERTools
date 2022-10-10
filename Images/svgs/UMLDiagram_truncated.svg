@@ -9,7 +9,7 @@
    id="svg5"
    inkscape:version="1.2.1 (9c6d41e410, 2022-07-14, custom)"
    sodipodi:docname="UMLDiagram_truncated.svg"
-   inkscape:export-filename="SimplifiedActionDiagram.png"
+   inkscape:export-filename="../jpgs/UML_illustration.jpg"
    inkscape:export-xdpi="93.272072"
    inkscape:export-ydpi="93.272072"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -28,12 +28,12 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="0.37201788"
-     inkscape:cx="1584.6012"
-     inkscape:cy="700.23515"
-     inkscape:window-width="950"
-     inkscape:window-height="1030"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:cx="1587.2893"
+     inkscape:cy="700.23516"
+     inkscape:window-width="1898"
+     inkscape:window-height="1001"
+     inkscape:window-x="10"
+     inkscape:window-y="32"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1" />
   <defs
@@ -930,7 +930,7 @@
     </g>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker4049)"
-       d="m 1098.1025,186.11553 55.6221,67.90438"
+       d="m 1098.1025,186.11553 55.6221,67.90439"
        id="path1876"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0"
@@ -1187,7 +1187,7 @@
        transform="rotate(-46.073364)"><tspan
          sodipodi:role="line"
          id="tspan1768"
-         style="stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
          x="317.21896"
          y="670.57153">splits into</tspan></text>
     <text
@@ -1199,7 +1199,7 @@
        transform="rotate(46.471763)"><tspan
          sodipodi:role="line"
          id="tspan1844"
-         style="stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
          x="714.99176"
          y="-325.90622">generates</tspan></text>
     <text
@@ -1241,7 +1241,7 @@
     </g>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker3011)"
-       d="M 834.5788,254.82178 785.94718,184.87982"
+       d="M 834.5788,254.82178 785.94719,184.87982"
        id="path1852"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0"
@@ -1258,7 +1258,7 @@
        inkscape:transform-center-y="1.3488307"><tspan
          sodipodi:role="line"
          id="tspan1854"
-         style="stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
          x="614.45898"
          y="-549.66302">carries out</tspan></text>
     <path
@@ -1280,7 +1280,7 @@
        inkscape:transform-center-y="20.399555"><tspan
          sodipodi:role="line"
          id="tspan1860"
-         style="stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
          x="314.26797"
          y="-757.13647">runs</tspan></text>
     <g
@@ -1305,7 +1305,7 @@
     </g>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1)"
-       d="m 892.28365,272.32752 50.60147,0.66486"
+       d="m 892.28365,272.32753 50.60147,0.66485"
        id="path1864"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0"
@@ -1319,7 +1319,7 @@
        id="text1868"><tspan
          sodipodi:role="line"
          id="tspan1866"
-         style="stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
          x="899.03992"
          y="261.97293">returns</tspan></text>
     <text
@@ -1331,7 +1331,7 @@
        transform="rotate(-44.959615)"><tspan
          sodipodi:role="line"
          id="tspan1872"
-         style="stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
          x="547.93835"
          y="884.8573">input to</tspan></text>
     <text
@@ -1342,14 +1342,14 @@
        id="text1880"
        transform="rotate(50.409511)"><tspan
          sodipodi:role="line"
-         style="stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
          x="865.06781"
          y="-731.87402"
          id="tspan2728">assigns</tspan><tspan
          sodipodi:role="line"
-         style="stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
          x="865.06781"
-         y="-718.6449"
+         y="-718.12286"
          id="tspan2732">noise to</tspan></text>
     <text
        xml:space="preserve"
@@ -1360,7 +1360,7 @@
        transform="rotate(-40.986466)"><tspan
          sodipodi:role="line"
          id="tspan1884"
-         style="stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
          x="600.60498"
          y="963.16156">generates</tspan></text>
     <text
@@ -1374,7 +1374,7 @@
        inkscape:transform-center-y="59.249414"><tspan
          sodipodi:role="line"
          id="tspan1890"
-         style="stroke-width:0.264583"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Consolas;-inkscape-font-specification:Consolas;stroke-width:0.264583"
          x="-96.6968"
          y="1097.8308">runs</tspan></text>
     <g
@@ -1569,7 +1569,7 @@
     </g>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker3287)"
-       d="M 1083.5279,186.11553 1063.623,349.30934"
+       d="M 1083.5279,186.11553 1063.623,349.30935"
        id="path1888"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0"
@@ -1585,7 +1585,7 @@
        inkscape:connection-end="#g1729" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:6, 3;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker4049)"
-       d="m 1145.0596,170.80846 59.3966,0.17915"
+       d="m 1145.0596,170.80846 59.3966,0.17914"
        id="path4247"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0"

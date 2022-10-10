@@ -2,14 +2,14 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="852.58234mm"
-   height="1000mm"
-   viewBox="0 0 852.58236 999.99997"
+   width="788.45752mm"
+   height="241.60938mm"
+   viewBox="0 0 788.45754 241.60937"
    version="1.1"
    id="svg5"
    inkscape:version="1.2.1 (9c6d41e410, 2022-07-14, custom)"
    sodipodi:docname="Process.svg"
-   inkscape:export-filename="UMLDiagram.png"
+   inkscape:export-filename="../jpgs/user_interaction_horizontal.jpg"
    inkscape:export-xdpi="93.272072"
    inkscape:export-ydpi="93.272072"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -28,12 +28,12 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="0.37201788"
-     inkscape:cx="1651.8023"
-     inkscape:cy="850.76556"
-     inkscape:window-width="1900"
-     inkscape:window-height="1030"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:cx="1503.96"
+     inkscape:cy="673.35473"
+     inkscape:window-width="1898"
+     inkscape:window-height="1001"
+     inkscape:window-x="10"
+     inkscape:window-y="32"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1" />
   <defs
@@ -1152,7 +1152,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-531.68669,-143.94155)">
+     transform="translate(-531.6867,-143.94155)">
     <g
        id="g2712" />
     <text
@@ -1179,7 +1179,7 @@
        style="font-size:40px;line-height:1.25;font-family:'DejaVu Math TeX Gyre';-inkscape-font-specification:'DejaVu Math TeX Gyre';white-space:pre;shape-inside:url(#rect867);display:inline;stroke-width:0.60294" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 749.3433,379.24062 v 0"
+       d="m 749.34331,379.24062 v 0"
        id="path979"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
@@ -1748,7 +1748,7 @@
          id="tspan5579-0-4">Noise Scaling + Virtual ZNE</tspan></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:6, 3;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#Arrow1)"
-       d="m 656.46366,187.11329 67.56229,21.90938"
+       d="m 656.46367,187.11329 67.56229,21.90938"
        id="path6389"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0"
@@ -1756,7 +1756,7 @@
        inkscape:connection-end="#g1729" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:6, 3;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#Arrow1)"
-       d="m 642.23861,217.49121 80.95395,2.39807"
+       d="m 642.23861,217.4912 80.95395,2.39808"
        id="path6391"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0"
@@ -1772,7 +1772,7 @@
        inkscape:connection-end="#g1729" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker6500)"
-       d="m 798.78345,220.63792 36.07667,-0.3541"
+       d="m 798.78345,220.63792 36.07668,-0.3541"
        id="path6395"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0"
@@ -1796,7 +1796,7 @@
        inkscape:connection-end="#g1729-4" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker6549)"
-       d="M 1059.8814,233.51604 797.89978,314.71987"
+       d="M 1059.8814,233.51604 797.89978,314.71986"
        id="path9697"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0"
@@ -1804,7 +1804,7 @@
        inkscape:connection-end="#g1729-30" />
     <path
        style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:6, 3;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;marker-end:url(#Arrow1);stop-color:#000000;stop-opacity:1"
-       d="M 652.80277,350.38155 722.89621,334.7056"
+       d="M 652.80277,350.38155 722.89622,334.7056"
        id="path9743"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0"
@@ -1820,7 +1820,7 @@
        inkscape:connection-end="#g1729-9-2" />
     <path
        style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;marker-end:url(#marker6549);stop-color:#000000;stop-opacity:1"
-       d="m 924.64283,325.85974 44.37324,-0.0885"
+       d="m 924.64282,325.85974 44.37325,-0.0885"
        id="path9747"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0"
