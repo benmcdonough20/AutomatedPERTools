@@ -1,0 +1,140 @@
+{
+    "module": "pygsti.processors.processorspec",
+    "class": "QubitProcessorSpec",
+    "version": 0,
+    "gate_names": [
+        "{idle}",
+        "Gxpi2",
+        "Gypi2",
+        "Gcphase"
+    ],
+    "nonstd_gate_unitaries": {
+        "{idle}": [
+            [
+                "(1+0j)",
+                "0j",
+                "0j",
+                "0j"
+            ],
+            [
+                "0j",
+                "(1+0j)",
+                "0j",
+                "0j"
+            ],
+            [
+                "0j",
+                "0j",
+                "(1+0j)",
+                "0j"
+            ],
+            [
+                "0j",
+                "0j",
+                "0j",
+                "(1+0j)"
+            ]
+        ],
+        "Gxpi2": [
+            [
+                "(0.7071067811865479+0j)",
+                "-0.7071067811865475j"
+            ],
+            [
+                "-0.7071067811865472j",
+                "(0.7071067811865476+0j)"
+            ]
+        ],
+        "Gypi2": [
+            [
+                "(0.7071067811865479+0j)",
+                "(-0.7071067811865475+0j)"
+            ],
+            [
+                "(0.7071067811865472+0j)",
+                "(0.7071067811865475+0j)"
+            ]
+        ],
+        "Gcphase": [
+            [
+                "(1+0j)",
+                "0j",
+                "0j",
+                "0j"
+            ],
+            [
+                "0j",
+                "(1+0j)",
+                "0j",
+                "0j"
+            ],
+            [
+                "0j",
+                "0j",
+                "(1+0j)",
+                "0j"
+            ],
+            [
+                "0j",
+                "0j",
+                "0j",
+                "(-1+0j)"
+            ]
+        ]
+    },
+    "availability": {
+        "{idle}": [
+            null
+        ],
+        "Gxpi2": [
+            [
+                1
+            ],
+            [
+                0
+            ]
+        ],
+        "Gypi2": [
+            [
+                1
+            ],
+            [
+                0
+            ]
+        ],
+        "Gcphase": [
+            [
+                0,
+                1
+            ]
+        ]
+    },
+    "prep_names": [
+        "rho0"
+    ],
+    "nonstd_preps": {},
+    "povm_names": [
+        "Mdefault"
+    ],
+    "nonstd_povms": {},
+    "instrument_names": [],
+    "nonstd_instruments": {},
+    "geometry": {
+        "module": "pygsti.baseobjs.qubitgraph",
+        "class": "QubitGraph",
+        "version": 0,
+        "node_names": [
+            0,
+            1
+        ],
+        "directed": true,
+        "direction_names": null,
+        "edges": []
+    },
+    "symplectic_reps": {},
+    "aux_info": {},
+    "qubit_labels": [
+        0,
+        1
+    ]
+}
