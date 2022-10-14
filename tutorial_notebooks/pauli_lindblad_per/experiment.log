@@ -1,28 +1,14 @@
-2022-09-30 15:15:50,255 Generated layer profile with 1 layers:
-2022-09-30 15:15:50,255 ["('cx', (Qubit(QuantumRegister(2, 'q'), 0), Qubit(QuantumRegister(2, 'q'), 1)))"]
-2022-09-30 15:15:50,258 Created pauli bases
-2022-09-30 15:15:50,258 ['XX', 'YX', 'ZX', 'XY', 'YY', 'ZY', 'XZ', 'YZ', 'ZZ']
-2022-09-30 15:15:50,258 Created model with the following terms:
-2022-09-30 15:15:50,258 {'ZI', 'IY', 'YY', 'IZ', 'XZ', 'ZY', 'YI', 'ZZ', 'YZ', 'XX', 'ZX', 'XI', 'YX', 'IX', 'XY'}
-2022-09-30 15:15:54,911 Chose single bases:
-2022-09-30 15:15:54,911 ['YZ', 'ZZ', 'XX', 'ZY', 'ZX', 'XY']
-2022-09-30 15:16:16,412 Created experiment consisting of 1464 instances
-2022-09-30 15:16:43,664 Fit noise model with following fidelities:
-2022-09-30 15:16:43,664 [0.9965923115334312, 0.9652720721640965, 0.9660830704990649, 0.9957679885411046, 0.9920659779069906, 0.9722264610264271, 0.9971013509290182, 0.9889006119475653, 0.9884171148719665, 0.9566153873531019, 0.9605535152895307, 0.9958748748769443, 0.9527143075634024, 0.974892822315171, 0.9688672104211077]
-2022-09-30 15:20:40,210 Generated layer profile with 1 layers:
-2022-09-30 15:20:40,210 ["('cx', (Qubit(QuantumRegister(5, 'q'), 0), Qubit(QuantumRegister(5, 'q'), 1)))"]
-2022-09-30 15:20:40,211 Created pauli bases
-2022-09-30 15:20:40,211 ['XX', 'YX', 'ZX', 'XY', 'YY', 'ZY', 'XZ', 'YZ', 'ZZ']
-2022-09-30 15:20:40,211 Created model with the following terms:
-2022-09-30 15:20:40,211 {'ZI', 'IY', 'YY', 'IZ', 'XZ', 'ZY', 'YI', 'ZZ', 'YZ', 'XX', 'ZX', 'XI', 'YX', 'IX', 'XY'}
-2022-09-30 15:23:13,839 Generated layer profile with 1 layers:
-2022-09-30 15:23:13,840 ["('cx', (Qubit(QuantumRegister(2, 'q'), 0), Qubit(QuantumRegister(2, 'q'), 1)))"]
-2022-09-30 15:23:13,841 Created pauli bases
-2022-09-30 15:23:13,841 ['XX', 'YX', 'ZX', 'XY', 'YY', 'ZY', 'XZ', 'YZ', 'ZZ']
-2022-09-30 15:23:13,842 Created model with the following terms:
-2022-09-30 15:23:13,842 {'ZI', 'IY', 'YY', 'IZ', 'XZ', 'ZY', 'YI', 'ZZ', 'YZ', 'XX', 'ZX', 'XI', 'YX', 'IX', 'XY'}
-2022-09-30 15:23:15,226 Chose single bases:
-2022-09-30 15:23:15,227 ['YZ', 'ZZ', 'XX', 'ZY', 'ZX', 'XY']
-2022-09-30 15:23:36,327 Created experiment consisting of 1464 instances
-2022-09-30 15:24:01,500 Fit noise model with following fidelities:
-2022-09-30 15:24:01,501 [0.9879667560933654, 0.97009365766217, 0.9797128668666123, 0.9963158712055759, 0.9923197943365326, 0.9675433982662872, 0.9999507681065952, 0.9975174167188186, 0.9855628252364326, 0.9672152698594433, 0.9512484319861694, 0.9954613436130705, 0.9577200210807916, 0.9654103516741614, 0.963236360813103]
+2022-10-14 02:26:26,103 Generated layer profile with 1 layers:
+2022-10-14 02:26:26,103 ["('cx', (Qubit(QuantumRegister(2, 'q'), 0), Qubit(QuantumRegister(2, 'q'), 1)))"]
+2022-10-14 02:26:26,107 Created pauli bases
+2022-10-14 02:26:26,107 ['XX', 'YX', 'ZX', 'XY', 'YY', 'ZY', 'XZ', 'YZ', 'ZZ']
+2022-10-14 02:26:26,107 Created model with the following terms:
+2022-10-14 02:26:26,107 {'XI', 'YY', 'ZY', 'XZ', 'YZ', 'ZI', 'XY', 'ZZ', 'XX', 'IX', 'IZ', 'YI', 'IY', 'ZX', 'YX'}
+2022-10-14 02:26:26,392 Chose single bases:
+2022-10-14 02:26:26,393 ['IX', 'IY', 'ZX', 'ZY', 'YI', 'ZZ']
+2022-10-14 02:27:01,053 Created experiment consisting of 1464 instances
+2022-10-14 02:27:36,968 Single-depth measurement produced fidelity greater than one: ZZ,ZI
+2022-10-14 02:27:36,968 Product fidelity: 0.9932331932541083
+2022-10-14 02:27:36,968 Single fidelity: 0.9841529225160239
+2022-10-14 02:27:36,969 Fit noise model with following fidelities:
+2022-10-14 02:27:36,969 [0.9958078705522455, 0.969854385571113, 0.9774678326773445, 0.9922296947510667, 0.9916055951490012, 0.9987275748342588, 0.9687795695377731, 0.9865121761817529, 0.9629741659920388, 0.9703426470800145, 0.99635722463881, 0.9967799685552978, 0.9664842401777841, 0.9573241867532771, 0.9556368907211993]
