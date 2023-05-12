@@ -33,7 +33,7 @@ class QiskitProcessor(Processor):
         return self._qpu.coupling_map.graph.subgraph(inst_map)
 
     def transpile(self, circuit : QiskitCircuit, inst_map, **kwargs):
-        return QiskitCircuit(transpile(circuit.qc, self._qpu, inst_map = inst_map, **kwargs))
+        return QiskitCircuit(transpile(circuit.qc, self._qpu, initial_layout = inst_map, **kwargs))
 
     @property
     def pauli_type(self):
